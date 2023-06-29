@@ -1,0 +1,10 @@
+services:
+  atcoder:
+    image: atcoder:0.1.0
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    tty: true
+    volumes:
+      - .:/app
+
