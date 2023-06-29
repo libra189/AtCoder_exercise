@@ -1,7 +1,8 @@
 def main():
-    i: list[str] = input().split(" ")
-    n: int = int(i[0])
-    k: int = int(i[1])
+    # i: list[str] = input().split(" ")
+    # n: int = int(i[0])
+    # k: int = int(i[1])
+    n, k = map(int, input().split())
 
     rc: int[str] = [int(j) for j in input().split(" ")]
     bc: int[str] = [int(j) for j in input().split(" ")]
