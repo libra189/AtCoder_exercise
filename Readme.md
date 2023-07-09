@@ -40,7 +40,7 @@
 2. テストデータのダウンロード
     ```bash
     $ cd execise/a01
-    $ oj d d https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_a
+    $ oj d https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_a
     ```
 3. プログラミング
 
