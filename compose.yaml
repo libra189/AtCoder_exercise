@@ -4,7 +4,8 @@ services:
     build:
       context: .
       dockerfile: .devcontainer/Dockerfile
+      args:
+        REQUIREMENTS: .devcontainer/requirements.txt
     tty: true
     volumes:
       - .:/app
-

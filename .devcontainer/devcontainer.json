@@ -1,5 +1,6 @@
 {
-	"name": "AtCoder",
-	"dockerFile": "Dockerfile",
-	"workspaceFolder": "/app"
+    "name": "AtCoder",
+    "dockerFile": "Dockerfile",
+    "workspaceFolder": "/app",
+    "shutdownAction": "stopContainer"
 }
