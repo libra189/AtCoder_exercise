@@ -11,8 +11,11 @@ class Cli(object):
         self.template_dir = ".template"
         self.template_files = {
             "main": "main.py",
-            "sample": "sample-1.in"
+            "sample": "sample-1.in",
+            "test_dir": "test"
         }
+        self.python = subprocess.run(["which", "python3"], capture_output=True, text=True).stdout.splitlines()[0]
+        self.oj = subprocess.run(["which", "oj"], capture_output=True, text=True).stdout.splitlines()[0]
 
     def setup(self, dir: str):
         """
@@ -40,7 +43,7 @@ class Cli(object):
             self.setup(dir)
 
         os.chdir(work_dir)
-        subprocess.run(["/usr/local/bin/oj", "d", url])
+        subprocess.run([self.oj, "d", "-d", self.template_files["test_dir"], url])
         os.chdir(cwd)
 
         return "Let's happy coding!"
@@ -52,8 +55,8 @@ class Cli(object):
         @param dir(str): ディレクトリ名
         """
         main_file = os.path.join(dir, self.template_files["main"])
-        test_input = os.path.join(dir, "test", self.template_files["sample"])
-        subprocess.run(f"/usr/local/bin/python3 {main_file} < {test_input}", shell=True)
+        test_input = os.path.join(dir, self.template_files["test_dir"], self.template_files["sample"])
+        subprocess.run(f"{self.python} {main_file} < {test_input}", shell=True)
 
     def run(self, dir: str):
         """
@@ -65,7 +68,8 @@ class Cli(object):
         work_dir: str = os.path.join(cwd, dir)
 
         os.chdir(work_dir)
-        subprocess.run(["/usr/local/bin/oj", "t", "-d", "test", "-c", f"python3 {self.template_files['main']}"])
+        cmd = [self.oj, "t", "-d", self.template_files["test_dir"], "-c", f"python3 {self.template_files['main']}"]
+        subprocess.run(cmd)
         os.chdir(cwd)
 
 if __name__ == "__main__":
