@@ -33,20 +33,33 @@
 
 ## 履修手順
 
+`execise`ディレクトリ以下で実行
+
 1. 演習問題用ディレクトリの作成
+
     ```bash
-    $ mkdir execise/a01
+    $ ./env.py setup a01
     ```
+
 2. テストデータのダウンロード
+
     ```bash
-    $ cd execise/a01
-    $ oj d https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_a
+    $ ./env dl a01 https://atcoder.jp/contests/tessoku-book/tasks/tessoku_book_a
     ```
+
 3. プログラミング
 
     好きなエディタで作成 VSCodeのDev Containersがオススメ
+
 4. テスト
+
     ```bash
-    $ oj t -d test -c "python3 main.py"
+    $ .env.py test a01
+    ```
+
+5. 結果の確認
+
+    ```bash
+    $ ./env.py run a01
     ```
     ターミナルに実行結果が出力されるので、それらがACになっているかを確認する。もしWAやREになっているとスクリプトに間違いがあるので、修正する。
