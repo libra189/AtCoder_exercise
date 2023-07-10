@@ -71,3 +71,9 @@
     ```bash
     $ oj t -d test -c "python3 xxx.py"
     ```
+
+## online-judge-template-generator
+
+🚧WIP🚧　`online-judge-template-generator`を使う方法
+
+[online-judge-tools/template-generator - Github](https://github.com/online-judge-tools/template-generator/blob/master/README.ja.md)
