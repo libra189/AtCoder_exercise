@@ -1,4 +1,6 @@
+fire==0.5.0
+ipython==8.14.0
+online-judge-template-generator=4.8.1
 online-judge-tools==11.5.1
 Selenium==4.10.0
-ipython==8.14.0
-fire==0.5.0
+yapf=0.40.1
