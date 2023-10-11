@@ -37,7 +37,7 @@
 4. テスト
 
     ```bash
-    $ .env.py test a01
+    $ ./env.py test a01
     ```
 
 5. 結果の確認

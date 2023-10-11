@@ -8,6 +8,7 @@
         {
             "type":"volume",
             "source":"../exercise",
-            "target":"${containerWorkspaceFolder}"}
+            "target":"${containerWorkspaceFolder}"
+        }
     ]
 }

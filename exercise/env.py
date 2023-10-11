@@ -1,9 +1,10 @@
-#!/usr/local/bin/python3
+#!/usr/bin/env python3
 
 import fire
 import os
 import shutil
 import subprocess
+
 
 class Cli(object):
 
@@ -30,7 +31,7 @@ class Cli(object):
         )
         return f"Create the directory and template: {dir}."
 
-    def dl(slef, dir: str, url: str):
+    def dl(self, dir: str, url: str):
         """
         練習問題をダウンロード
 
@@ -71,6 +72,7 @@ class Cli(object):
         cmd = [self.oj, "t", "-d", self.template_files["test_dir"], "-c", f"python3 {self.template_files['main']}"]
         subprocess.run(cmd)
         os.chdir(cwd)
+
 
 if __name__ == "__main__":
     fire.Fire(Cli)
