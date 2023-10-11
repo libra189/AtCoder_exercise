@@ -89,3 +89,8 @@ Dockerコンテナへログインし、`exercise`ディレクトリ以下で各�
 🚧WIP🚧　`online-judge-template-generator`を使う方法
 
 [online-judge-tools/template-generator - Github](https://github.com/online-judge-tools/template-generator/blob/master/README.ja.md)
+
+## Knowledge
+
+- [さまざまな入力の受け取り方【Python】 - クルトンのプログラミング教室](https://kuruton.hatenablog.com/entry/2020/07/16/105306)
+
