@@ -1,14 +1,13 @@
 {
-    "name": "AtCoder",
-    "dockerFile": "Dockerfile",
-    "workspaceFolder": "/app",
-    "shutdownAction": "stopContainer",
-    "runArgs": ["--name=atcoder"],
-    "mounts": [
-        {
-            "type":"volume",
-            "source":"../exercise",
-            "target":"${containerWorkspaceFolder}"
-        }
-    ]
+	"name": "AtCoder",
+	"dockerComposeFile": [
+		"../compose.yaml",
+		"docker-compose.yml"
+	],
+	"service": "atcoder",
+	"workspaceFolder": "/app",
+	"shutdownAction": "stopCompose",
+	"runServices": [
+		"atcoder"
+	]
 }
