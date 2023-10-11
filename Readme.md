@@ -8,7 +8,19 @@
 
 ## 環境構築
 
-🚧WIP🚧
+### 事前準備
+
+- Docker
+- Docker Compose
+
+### コンテナビルド
+
+Dockerコンテナを作成し、コンテナ上でテスト、コンテストの実施を行う
+
+```bash
+$ docker pull python:3.11-slim
+$ docker compose build
+```
 
 ### 参考
 
@@ -16,7 +28,7 @@
 
 ## 履修手順
 
-`exercise`ディレクトリ以下で実行
+Dockerコンテナへログインし、`exercise`ディレクトリ以下で各コマンドを実行
 
 1. 演習問題用ディレクトリの作成
 
